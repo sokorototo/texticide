@@ -1,0 +1,28 @@
+{
+  "name": "texticide",
+  "version": "0.0.1",
+  "description": "Identify and Nuke text fragments based on paterns.",
+  "main": "build/txcd.min.js",
+  "scripts": {
+    "test": "node tests/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sokorototo/texticide.git"
+  },
+  "keywords": [
+    "regex",
+    "patterns",
+    "text",
+    "sanitize",
+    "sanitizer",
+    "cusswords",
+    "clean"
+  ],
+  "author": "Newton Toto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sokorototo/texticide/issues"
+  },
+  "homepage": "https://github.com/sokorototo/texticide#readme"
+}
