@@ -1,6 +1,6 @@
 {
   "name": "texticide",
-  "version": "0.0.1",
+  "version": "0.5.1",
   "description": "Identify and Nuke text fragments based on paterns.",
   "main": "build/txcd.min.js",
   "scripts": {
