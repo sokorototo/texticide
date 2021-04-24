@@ -170,7 +170,7 @@ examples.forEach(( sentence ) => {
 
 `Sanitizer.locate` returns an object literal with the following properties: (1)`match`; an array with the actual word found and its location inside of the input string. (2)`word`; the `id` of the word that matched the `match`.  (3)`pattern`; the regex that matched the `match`.  (4)`diction`; the diction from which the word was declared. Output: 
 
-```bash
+```
 Such cute gerbils! => {
   match: [ 'gerbil', 10, 16 ],
   diction: 'Black American',

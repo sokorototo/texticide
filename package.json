@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/sokorototo/texticide#readme",
   "files": [
-    "/build",
+    "build/txcd.min.es6",
+    "build/txcd.min.js",
     "README.md",
     "package.json"
   ]
