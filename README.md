@@ -4,7 +4,7 @@
 
 ------
 
-SHIELD.IO STUFF
+![npm](https://img.shields.io/npm/v/texticide?style=flat-square)![npm bundle size](https://img.shields.io/bundlephobia/min/texticide?style=flat-square)[![](https://data.jsdelivr.com/v1/package/npm/texticide/badge)](https://www.jsdelivr.com/package/npm/texticide)![NPM](https://img.shields.io/npm/l/texticide?style=flat-square)![npm](https://img.shields.io/npm/dw/texticide?style=flat-square)![GitHub issues](https://img.shields.io/github/issues/sokorototo/texticide?style=flat-square)![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/sokorototo/texticide?style=flat-square)
 
 ***Texticide.js* is a JavaScript library for identifying all fragments of a given text that match a given regular expression and provides extra functionality for editing out said fragments.**
 
@@ -232,4 +232,6 @@ A *** wandered into our garden one day
 For I will consider my *** Jeoffry
 You’ve read of several kinds of ***
 ```
+
+### Extras.
 
