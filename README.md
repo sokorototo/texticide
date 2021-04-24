@@ -233,5 +233,10 @@ For I will consider my *** Jeoffry
 You’ve read of several kinds of ***
 ```
 
+------
+
 ### Extras.
+
+- Feedback would be much appreciated.
+- For any issues, go [here](https://github.com/sokorototo/texticide/issues).
 
