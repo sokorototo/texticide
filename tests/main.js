@@ -32,12 +32,12 @@ let animals = new Texticide.Diction("Black American", [
     }
 ]);
 let sntzr = new Texticide.Sanitizer([animals], {
-    defaultLevel: 6,
+    defaultLevel: 4,
     replacer: x => x.length
 });
 
 examples.forEach(( sentence ) => {
-    sntzr.locate(sentence, 6).forEach(find => console.log(sentence, find));
+    sntzr.locate(sentence).forEach(find => console.log(sentence, find));
 });
 
 setTimeout(() => {
