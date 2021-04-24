@@ -135,10 +135,10 @@ let animals = new Texticide.Diction("Black American", [
 Next we need to build our `Sanitizer`. The constructor takes two parameters an array of `Diction` instances, its dictionary, and a config object literal. Its dictionary tells the Sanitizer what words to recognize. This is because it allows one to build multiple sanitizers each with a different dictionary. The second parameter is an object literal with two optional properties, `defaultLevel` and `replacer`.  The `defaultLevel` tells the `Sanitizer` to only hit words with a level equal to or lower than `defaultLevel`. The replacer can be a function or a string and it tells the `Sanitizer.clean` how to erase found matches. If a string is given a unit is picked at random from the string and substituted in place for each letter in the match:
 
 ```
-Text.							replacer.			Result.
-I love dogs.					'+'					I love ++++.
-Sadly bacon comes from pigs.	'123'				Sadly bacon comes from 312.
-I am allergic to cats.			'&-%!'				I am allergic to &!%-.
+Text.___________________________replacer.________Result.
+I love dogs.____________________'+'______________I love ++++.
+Sadly bacon comes from pigs.____'123'____________Sadly bacon comes from 312.
+I am allergic to cats.__________'&-%!'___________I am allergic to &!%-.
 ```
 
 If a function is used, the function is called with the found text and the return value injected in place.
