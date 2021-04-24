@@ -61,7 +61,7 @@ import {Diction, Sanitizer} from "texticide.min.mjs";
 ##### RequireJS.
 
 ```javascript
-requirejs(["path/to/texticide.min.mjs"], function(Texticide) {
+requirejs(["path/to/texticide.min.js"], function(Texticide) {
     const {Diction, Sanitizer} = Texticide;
     // Do yo stuff over here
 });
