@@ -33,7 +33,7 @@ npm install texticide
 
 ##### Embedded.
 
-Include the file `worley.min.js` in your project directory. Then:
+Include the file `texticide.min.js` in your project directory. Then:
 
 - Browser:  
 
@@ -44,7 +44,7 @@ Include the file `worley.min.js` in your project directory. Then:
 - Node: 
 
   ```javascript
-  const Worley = require("texticide");
+  const {Diction, Sanitizer} = require("texticide");
   ```
 
 ##### ES6 Module.
@@ -71,7 +71,7 @@ requirejs(["path/to/texticide.min.mjs"], function(Texticide) {
 
 ### Usage.
 
-The `Texticide` object has two main classes as methods, `Diction` and `Sanitizer`. The `Diction` class is used to build a set of recognizable words. A `word` here has `id` (identifier),` level` (for filtering) and `patterns` (array of regular expressions) parameters. The `Sanitizer` builds the functionality to locate and clean any words from a piece of text.
+The `Texticide` object has two main classes as methods, `Diction` and `Sanitizer`. The `Diction` class is used to build a set of recognizable `word`s. A `word` here has `id` (identifier), ` level` (for filtering) and `patterns` (array of regular expressions) parameters. The `Sanitizer` builds the functionality to locate and clean any words from a piece of text.
 
 ------
 
@@ -86,7 +86,7 @@ Lets say we have an array of animal related sentences in a file( example.json ).
     "Alright peter rabbit!",
     "My cows are cool. They really like chickens",
     "My dog is real cool",
-    "Your bitch a cat",
+    "Your cat is a bitch",
     "Get the fuck outta here pig!",
     "A dog wandered into our garden one day",
     "For I will consider my Cat Jeoffry",
@@ -94,7 +94,7 @@ Lets say we have an array of animal related sentences in a file( example.json ).
 ]
 ```
 
-First we need to build our `Diction` instance, what our `Sanitizer` can recognize. The first parameter is the name of the instance. This is useful for scoping, seen later. The second parameter is an array of object literals ( words ) that contain `id`, `level` and `patterns` properties. [Explained here.]()
+First we need to build our `Diction` instance, what our `Sanitizer` can recognize. The first parameter is the name of the instance. This is useful for scoping, seen later. The second parameter is an array of object literals ( words ) that contain `id`, `level` and `patterns` properties. [Explained here.](https://github.com/sokorototo/texticide#usage)  `patterns`, this is because a word can have multiple patterns that may not fit into one Regular Expression hence needing an array of Regular Expressions.
 
 ```javascript
 const Texticide = require("texticide");
