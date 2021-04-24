@@ -1,5 +1,5 @@
 const Texticide = require("../build/txcd.max"), examples = require("./examples.json");
-let animals = new Texticide.Diction("Black American", [
+let animals = new Texticide.Diction("Animals", [
     {
         id: "gerbil",
         level: 2,

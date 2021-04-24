@@ -8,7 +8,7 @@
 
 ***Texticide.js* is a JavaScript library for identifying all fragments of a given text that match a given regular expression and provides extra functionality for editing out said fragments.**
 
-
+![](C:\Users\user\Documents\texticide\carbon.png)
 
 ### Installation.
 
@@ -98,7 +98,7 @@ First we need to build our `Diction` instance, what our `Sanitizer` can recogniz
 
 ```javascript
 const Texticide = require("texticide");
-let animals = new Texticide.Diction("Black American", [
+let animals = new Texticide.Diction("Animals", [
     {
         id: "gerbil",
         level: 2,
@@ -173,13 +173,13 @@ examples.forEach(( sentence ) => {
 ```
 Such cute gerbils! => {
   match: [ 'gerbil', 10, 16 ],
-  diction: 'Black American',
+  diction: 'Animals',
   pattern: /g(a|e)r?bil{1,2}/gi,
   word: 'gerbil'
 }
 Get the fuck outta here pig! => {
   match: [ 'pig', 24, 27 ],
-  diction: 'Black American',
+  diction: 'Animals',
   pattern: /p(i|y)g+/gi,
   word: 'pig'
 }
