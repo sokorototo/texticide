@@ -8,7 +8,7 @@
 
 ***Texticide.js* is a JavaScript library for identifying all fragments of a given text that match a given regular expression and provides extra functionality for editing out said fragments.**
 
-![](C:\Users\user\Documents\texticide\carbon.png)
+![](https://raw.githubusercontent.com/sokorototo/texticide/master/_carbon.png)
 
 ### Installation.
 
