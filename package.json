@@ -1,6 +1,6 @@
 {
   "name": "texticide",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "Identify and Nuke text fragments based using Regular Expresions.",
   "main": "build/txcd.min.js",
   "scripts": {

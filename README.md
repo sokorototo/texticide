@@ -94,7 +94,7 @@ Lets say we have an array of animal related sentences in a file( example.json ).
 ]
 ```
 
-First we need to build our `Diction` instance, what our `Sanitizer` can recognize. The first parameter is the name of the instance. This is useful for scoping, seen later. The second parameter is an array of object literals ( words ) that contain `id`, `level` and `patterns` properties. [Explained here.](https://github.com/sokorototo/texticide#usage)  `patterns`, this is because a word can have multiple patterns that may not fit into one Regular Expression hence needing an array of Regular Expressions.
+First we need to build our `Diction` instance, what our `Sanitizer` can recognize. The first parameter is the name of the instance. This is useful for scoping, seen later. The second parameter is an array of object literals ( words ) that contain `id`, `level` and `patterns` properties. [Explained here.](#usage)  `patterns`, this is because a word can have multiple patterns that may not fit into one Regular Expression hence needing an array of Regular Expressions.
 
 ```javascript
 const Texticide = require("texticide");
