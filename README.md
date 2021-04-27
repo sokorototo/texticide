@@ -224,13 +224,65 @@ Output:
 Such cute ******s!  << hits all words, as they are all below 6 >>
 Stupid ***, scratching the upholstery
 Alright peter ******!
-My cows are cool. They really like chickens << ignores cows  >>
+My cows are cool. << ignores cows as it is included in the exclude set (third arg of sntzr.clean) >>
 My *** is real cool
 Your *** is a bitch
 Get the fuck outta here ***!
 A *** wandered into our garden one day
 For I will consider my *** Jeoffry
 You’ve read of several kinds of ***
+```
+
+
+
+-----
+
+#### `Levels` in texticide.
+
+You might have noticed `word`s taking a `level` attribute in their definition. A `level` provides some form of filtering functionality. This is used within the `Sanitizer.locate` and `Sanitizer.clean` functions to filter out matches. For example, the word `dog` has a level of 4, `gerbil` of level 2 and cat of level 5. If we pass to a call of `Sanitizer.locate` a second parameter of 4, it will **ignore all words with levels higher (level > filter) than 5**. Therefore, `cat` will be ignored, as it has a level of 5. For example:
+
+```javascript
+const examples = require("./examples.json");
+examples.forEach(( sentence ) => {
+    console.log(sntzr.clean(sentence, 4));
+});
+
+// Such cute ******s!
+// Stupid cat, scratching the upholstery
+// Alright peter ******!
+// My **** are cool.
+// My *** is real cool
+// Your cat is a bitch
+// Get the fuck outta here ***!
+// A *** wandered into our garden one day
+// For I will consider my Cat Jeoffry
+// You’ve read of several kinds of Cat
+```
+
+Therefore, to match any and all `word`s use a filter of `Infinity` and match none use a filter of `-Infinity`.
+
+You can also pre-define the filtering levels for both `Sanitizer.locate` and `Sanitizer.clean` functions while building the `Sanitizer` like this:
+
+```javascript
+let sntzr = new Texticide.Sanitizer([animals], {
+    defaultLevel: 4,
+});	
+
+const examples = require("./examples.json");
+examples.forEach(( sentence ) => {
+    console.log(sntzr.clean(sentence, 4));
+});
+
+// Such cute ******s!
+// Stupid cat, scratching the upholstery
+// Alright peter ******!
+// My **** are cool.
+// My *** is real cool
+// Your cat is a bitch
+// Get the fuck outta here ***!
+// A *** wandered into our garden one day
+// For I will consider my Cat Jeoffry
+// You’ve read of several kinds of Cat
 ```
 
 ------
