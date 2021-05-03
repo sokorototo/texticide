@@ -1,4 +1,4 @@
-const Texticide = require("../build/txcd.max"), examples = require("./examples.json");
+const Texticide = require("../build/txcd.min"), examples = require("./examples.json");
 let animals = new Texticide.Diction("Animals", [
     {
         id: "gerbil",
