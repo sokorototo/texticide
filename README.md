@@ -52,7 +52,7 @@ Include the file `texticide.min.js` in your project directory. Then:
 In the build directory is an es6 module implementation of the library. The main|default import of the module id the `Texticide` object itself:
 
 ```javascript
-import Texticide from "texticide.min.mjs";
+import Texticide from "texticide.min.mjs"; // Use this in Deno
 import {Diction, Sanitizer} from "texticide.min.mjs";
 ```
 
