@@ -4,7 +4,7 @@
   "description": "Identify and Nuke text fragments based using Regular Expresions.",
   "main": "build/txcd.min.js",
   "scripts": {
-    "test": "node tests/main.js"
+    "test": "echo Only works when full directory id cloned from GitHub, as it contains a test script: && node tests/main.js"
   },
   "repository": {
     "type": "git",
