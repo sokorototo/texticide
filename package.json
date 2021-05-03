@@ -28,7 +28,6 @@
   "files": [
     "build/txcd.min.mjs",
     "build/txcd.min.js",
-    "README.md",
-    "package.json"
+    "README.md"
   ]
 }
