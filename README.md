@@ -143,7 +143,7 @@ I am allergic to cats.__________'&-%!'___________I am allergic to &!%-.
 
 If a function is used, the function is called with the found text and the return value injected in place.
 
-```
+```javascript
 const replacer  = x => x.length;
 // I am allergic to any cat. => I am allergic to any 3.
 // Sadly bacon comes from piggs. => Sadly bacon comes from 5.
