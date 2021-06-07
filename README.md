@@ -291,4 +291,4 @@ examples.forEach(( sentence ) => {
 
 - Feedback would be much appreciated.
 - For any issues, go [here](https://github.com/sokorototo/texticide/issues).
-
+- I would really enjoy if you dropped me a star 🌟
