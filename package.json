@@ -1,10 +1,11 @@
 {
   "name": "texticide",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Identify and Nuke text fragments based using Regular Expresions.",
   "main": "build/txcd.min.js",
   "scripts": {
-    "test": "echo Only works when full directory id cloned from GitHub, as it contains a test script: && node tests/main.js"
+    "test": "echo Only works when full directory id cloned from GitHub, as it contains a test script: && node tests/main.mjs",
+    "build": "rollup --config ./src/rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -19,15 +20,18 @@
     "sanitizer",
     "clean"
   ],
-  "author": "Newton Toto",
+  "author": "Newton Toto <nyachiengatoto@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sokorototo/texticide/issues"
   },
   "homepage": "https://github.com/sokorototo/texticide#readme",
   "files": [
-    "build/txcd.min.mjs",
-    "build/txcd.min.js",
+    "build/",
     "README.md"
-  ]
+  ],
+  "devDependencies": {
+    "rollup": "^2.53.2",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
 }

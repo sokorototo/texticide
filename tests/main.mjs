@@ -1,5 +1,8 @@
-const Texticide = require("../build/txcd.min"), examples = require("./examples.json");
-let animals = new Texticide.Diction("Animals", [
+import Texticide from '../build/txcd.min.mjs';
+import {readFileSync} from 'fs';
+
+const examples = JSON.parse(readFileSync("./tests/examples.json"));
+const animals = new Texticide.Diction("Animals", [
     {
         id: "gerbil",
         level: 2,
@@ -31,15 +34,18 @@ let animals = new Texticide.Diction("Animals", [
         patterns: [ new RegExp("p(i|y)g+", "ig") ]
     }
 ]);
+
+console.time('Texticide.Sanitizer');
 let sntzr = new Texticide.Sanitizer([animals], {
     defaultLevel: 4,
     replacer: x => x.length
 });
+console.timeEnd('Texticide.Sanitizer');
 
+console.time('Texticide.Locate');
 examples.forEach(( sentence ) => {
     sntzr.locate(sentence).forEach(find => console.log(sentence, find));
 });
+console.timeEnd('Texticide.Locate');
 
-setTimeout(() => {
-    console.log("\nAll tests passed!")
-}, 60*2);  // 2 minutes
+console.log("\nAll tests passed!")

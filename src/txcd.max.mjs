@@ -1,4 +1,4 @@
-export class Diction{
+class Diction{
     constructor( name, words = [] ){
         if (!Array.isArray(words)) throw new Error("Expected parameter for Diction should be an array!");
 
@@ -18,7 +18,7 @@ export class Diction{
     }
 };
 
-export class Sanitizer{
+class Sanitizer{
     constructor(dictionary = [], config = {}){
         if( !Array.isArray(dictionary) || typeof config != "object" ){
             throw new Error("Sanitizer parameters are not of type: fn(Array, Object)")
@@ -42,8 +42,8 @@ export class Sanitizer{
                 for (let k = 0; k < patterns.length; k++) {
                     const pattern = patterns[k];
                     let exit = false;
+                    let scope = {diction: diction.name, pattern,word: word.id};
                     while(!exit){
-                        let scope = {diction: diction.name, pattern,word: word.id};
                         let match = pattern.exec(string);
                         exit = !match;
                         if (exit) continue;
@@ -80,10 +80,5 @@ export class Sanitizer{
         return string
     }
 };
-// Texticide = { Diction, Sanitizer: ( fn()-> { fn(), fn() } ) }
-const Texticide = {
-    Diction,
-    Sanitizer
-};
 
-export default Texticide;
+export default { Sanitizer, Diction }
